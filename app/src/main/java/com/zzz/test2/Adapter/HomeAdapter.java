@@ -52,14 +52,12 @@ public class HomeAdapter extends ArrayAdapter{
         if (convertView == null) {
             convertView = layoutInflater.inflate(R.layout.home_list_item,null);
             viewHolder = new ViewHolder();
-            viewHolder.id = (TextView)convertView.findViewById(R.id.text_view);
-            viewHolder.name = (Button)convertView.findViewById(R.id.item_button);
             convertView.setTag(viewHolder);
         }else {
             viewHolder = (ViewHolder)convertView.getTag();
         }
-        viewHolder.id.setText(homeModels.get(position).getId());
         viewHolder.name.setText(homeModels.get(position).getName());
+
         return convertView;
     }
 

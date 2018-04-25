@@ -5,41 +5,102 @@ package com.zzz.test2.Model;
  */
 
 public class HomeModel {
-    private String id;
+    //用户头像地址
+    private String iconImageAddress;
+    //userName
     private String name;
-    private String age;
+    //关注标识
+    private int focusIdentity;
+    //主图地址
+    private String mainImageAddress;
+    //图片名字
+    private String imageName;
+    //爱心标识
+    private int loveIdentity;
+    //爱心数量
+    private String loveNumber;
+    //评论
+    private String commentString;
+
+    public HomeModel(String iconImageAddress, String name, int focusIdentity, String mainImageAddress, String imageName, int loveIdentity, String loveNumber, String commentString) {
+        this.iconImageAddress = iconImageAddress;
+        this.name = name;
+        this.focusIdentity = focusIdentity;
+        this.mainImageAddress = mainImageAddress;
+        this.imageName = imageName;
+        this.loveIdentity = loveIdentity;
+        this.loveNumber = loveNumber;
+        this.commentString = commentString;
+    }
+
     public HomeModel () {
         super();
+
     }
 
-    public HomeModel(String id,String name,String age) {
-        super();
-        this.id = id;
-        this.name = name;
-        this.age = age;
+    public String getIconImageAddress() {
+        return iconImageAddress;
     }
 
-    public String getId() {
-        return id;
+    public void setIconImageAddress(String iconImageAddress) {
+        this.iconImageAddress = iconImageAddress;
+    }
+
+    public int getFocusIdentity() {
+        return focusIdentity;
+    }
+
+    public void setFocusIdentity(int focusIdentity) {
+        this.focusIdentity = focusIdentity;
+    }
+
+    public String getMainImageAddress() {
+        return mainImageAddress;
+    }
+
+    public void setMainImageAddress(String mainImageAddress) {
+        this.mainImageAddress = mainImageAddress;
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    public int getLoveIdentity() {
+        return loveIdentity;
+    }
+
+    public void setLoveIdentity(int loveIdentity) {
+        this.loveIdentity = loveIdentity;
+    }
+
+    public String getLoveNumber() {
+        return loveNumber;
+    }
+
+    public void setLoveNumber(String loveNumber) {
+        this.loveNumber = loveNumber;
+    }
+
+    public String getCommentString() {
+        return commentString;
+    }
+
+    public void setCommentString(String commentString) {
+        this.commentString = commentString;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setAge(String age) {
-        this.age = age;
-    }
 }

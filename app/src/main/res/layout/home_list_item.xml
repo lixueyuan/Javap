@@ -1,16 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/img_info3_relative2"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/text_view"/>
+    android:layout_marginBottom="10dp"
+    android:background="#FFF"
+    android:minHeight="200dp">
+    <!-- 个人图像 -->
     <Button
+        android:id="@+id/home_item_icon_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="5dp"
+        android:background="@mipmap/moren1"/>
+    <!-- 显示一个用户名 -->
+    <TextView
+        android:id="@+id/home_item_personName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/item_button"/>
-
-</LinearLayout>
+        android:layout_toRightOf="@+id/home_item_icon_button"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp" />
+    <!--关注按钮-->
+    <Button
+        android:id="@+id/home_item_focusButton"
+        android:layout_width="60dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/guanzhu" />
+    <!-- 作品的大图 -->
+    <ImageView
+        android:id="@+id/home_item_bigImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_item_personName"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/banner1"/>
+    <!-- 作品的名字 -->
+    <TextView
+        android:id="@+id/home_item_productionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_item_bigImage"
+        android:layout_margin="10dp"
+        android:textSize="16sp"/>
+    <RelativeLayout
+        android:id="@+id/img_info3_relative3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/home_item_productionName">
+        <!--爱心按钮-->
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/dianzan1"
+            android:id="@+id/home_item_loveButton"
+            android:clickable="true"
+            
+            />
+        <!--爱心数量-->
+        <TextView
+            android:id="@+id/home_item_loveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/home_item_loveButton"
+            android:layout_marginLeft="5dp"
+            android:textSize="14dp"
+            android:text="66"/>
+        <!--评论按钮-->
+        <Button
+            android:id="@+id/home_item_commentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/home_item_loveText"
+            android:layout_marginLeft="40dp"
+            android:textSize="16dp"
+            android:text="评论(45)" />
+        <!--转发按钮-->
+        <Button
+            android:id="@+id/home_item_shareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:textSize="16dp"
+            android:text="转发"/>
+    </RelativeLayout>
+</RelativeLayout>
