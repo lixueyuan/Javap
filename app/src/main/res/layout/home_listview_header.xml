@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/home_item_header_scrollview"
+        android:background="@color/colorAccent"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="主题推荐"
+        android:textSize="20dp"
+        android:id="@+id/home_item_header_tipsText"
+        android:layout_below="@+id/home_item_header_scrollview"
+        />
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_item_header_tipsText">
+        <LinearLayout
+            android:id="@+id/main_img_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/main_text_zhuti"
+                android:src="@mipmap/zhuti1"/>
+            <ImageView
+                style="@style/main_text_zhuti"
+                android:src="@mipmap/zhuti2"/>
+            <ImageView
+                style="@style/main_text_zhuti"
+                android:src="@mipmap/zhuti3"/>
+            <ImageView
+                style="@style/main_text_zhuti"
+                android:src="@mipmap/zhuti1"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</RelativeLayout>
